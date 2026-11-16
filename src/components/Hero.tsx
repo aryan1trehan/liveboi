@@ -76,7 +76,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       onMouseMove={handleMouseMove}
-      className="relative flex flex-col overflow-hidden bg-[#080808] cursor-none"
+      className="enh-glow enh-glow-hero relative flex flex-col overflow-hidden bg-[#080808] cursor-none"
       style={{ minHeight: "calc(100vh - 12px)", borderRadius: "20px" }}
     >
       {/* ── Angular moving background ──────────────────────────── */}

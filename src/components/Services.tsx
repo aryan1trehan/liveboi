@@ -269,7 +269,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative bg-[#0d0d0d] text-white"
+      className="enh-glow relative bg-[#0d0d0d] text-white"
       style={{ borderRadius: "40px", marginTop: "-40px", zIndex: 10 }}
     >
       <div className="pt-16 pb-24">

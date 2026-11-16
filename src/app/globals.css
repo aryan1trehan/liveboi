@@ -53,3 +53,80 @@ body {
 .animate-marquee-reverse {
   animation: marquee-reverse 20s linear infinite;
 }
+
+/* Enhanccee brand green (from enhanccee.com) */
+:root {
+  --enh-teal-deep: #081b1b;
+  --enh-teal-glow: #0a2a2a;
+  --enh-teal-soft: rgba(8, 40, 40, 0.8);
+  --enh-teal-line: rgba(8, 100, 70, 0.9);
+  --enh-teal-line-fade: rgba(8, 80, 60, 0.6);
+}
+
+.enh-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.enh-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(110% 70% at 50% 0%, var(--enh-teal-glow) 0%, transparent 65%),
+    radial-gradient(80% 60% at 50% 100%, var(--enh-teal-soft) 0%, transparent 60%);
+}
+
+.enh-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 6;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--enh-teal-line-fade) 30%,
+    var(--enh-teal-line) 50%,
+    var(--enh-teal-line-fade) 70%,
+    transparent 100%
+  );
+}
+
+/* Hero-only stronger glow */
+.enh-glow-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(120% 55% at 50% 0%, #0d4040 0%, rgba(8, 90, 70, 0.55) 35%, transparent 65%),
+    radial-gradient(90% 50% at 50% 100%, rgba(8, 70, 55, 0.7) 0%, transparent 60%);
+}
+
+.enh-glow-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 6;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(8, 120, 85, 0.5) 20%,
+    rgba(10, 180, 120, 1) 50%,
+    rgba(8, 120, 85, 0.5) 80%,
+    transparent 100%
+  );
+}
